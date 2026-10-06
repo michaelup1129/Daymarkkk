@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Daymark",
+    "slug": "daymark",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "daymark",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
