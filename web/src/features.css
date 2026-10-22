@@ -1,0 +1,170 @@
+.login-page,
+.legal-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 24px;
+  min-height: 100dvh;
+}
+.brand-link,
+.brand-link:visited {
+  display: inline-block;
+  color: #30382f;
+  text-decoration: none;
+}
+.brand-link span {
+  color: #a8b19d;
+}
+.login-card {
+  margin: 60px auto 20px;
+  padding: 40px;
+  max-width: 620px;
+}
+.login-card h1 {
+  font-size: 42px;
+}
+.login-card .primary {
+  width: 100%;
+  margin: 20px 0;
+}
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.consent input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #30382f;
+}
+.legal-footer {
+  margin-top: 42px;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #817e74;
+  line-height: 1.8;
+}
+.legal-footer a,
+.consent a,
+.legal-page a:not(.brand-link) {
+  color: #53654d;
+  text-underline-offset: 3px;
+}
+.legal-page h2 {
+  margin-top: 32px;
+}
+.fortune {
+  padding: 20px 0;
+}
+.fortune p {
+  padding: 18px;
+  background: #e9ece3;
+  border-radius: 16px;
+}
+.obscured {
+  filter: blur(5px);
+  user-select: none;
+  font-size: 28px;
+  margin: 12px;
+}
+.content-warning {
+  background: #f8f5ee;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 16px 0;
+}
+.admin-grid {
+  display: grid;
+  gap: 15px;
+}
+.admin-grid input,
+.admin-grid textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d4d8ce;
+  border-radius: 12px;
+}
+.admin-grid input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  accent-color: #30382f;
+}
+.admin-row {
+  overflow-wrap: anywhere;
+}
+.admin-row .button-row {
+  margin: 15px 0;
+}
+.site-notice {
+  background: #e9ece3;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.sky-wrap {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.sky-header {
+  position: static;
+  padding: 28px 20px 16px;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+.sky-header strong {
+  max-width: 100%;
+  font-size: clamp(23px, 4vw, 28px);
+}
+#sky-svg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  max-height: none;
+  flex-shrink: 0;
+}
+.sky-footer {
+  position: static;
+  padding: 10px 14px 24px;
+}
+.bottom-nav {
+  overflow-x: auto;
+  gap: 2px;
+}
+.bottom-nav button {
+  flex-shrink: 0;
+}
+.toast {
+  white-space: normal;
+  max-width: 90vw;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #677660;
+  outline-offset: 4px;
+}
+@media (max-width: 450px) {
+  .login-card {
+    padding: 24px;
+    margin-top: 35px;
+  }
+  .login-card h1 {
+    font-size: 34px;
+  }
+  .bottom-nav small {
+    font-size: 8px;
+  }
+  .legal-footer {
+    padding-bottom: 12px;
+  }
+}

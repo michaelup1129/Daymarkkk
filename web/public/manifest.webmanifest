@@ -1,1 +1,1 @@
-{"name":"Daymark","short_name":"daymark","start_url":"/","display":"standalone","background_color":"#F8F5EE","theme_color":"#30382F"}
+{"name":"Daymark","short_name":"daymark","start_url":"./","scope":"./","display":"standalone","background_color":"#F8F5EE","theme_color":"#30382F"}

@@ -1,5 +1,16 @@
 # Daymark
 
+## 웹 멀티유저 구현 (2026-10-22)
+
+이번 개발 대상은 `web/`입니다. Vite/React 구조를 유지하며 Supabase Google 로그인, 서버 커뮤니티, 신고·관리자 권한, 약관 화면과 로컬 포춘 메시지를 추가했습니다. **실제 로그인/커뮤니티는 Supabase·Google 외부 설정과 데이터베이스/함수 배포 후 동작합니다.**
+
+실행: `cd web` → `npm ci` → `.env.example`을 `.env.local`로 복사하고 공개 설정값 입력 → `npm run dev` → `http://localhost:5173/Daymarkkk/`.
+
+- [외부 설정과 배포 절차](web/DEPLOYMENT-SETUP.md)
+- [구현 작업 기록](docs/WEB-WORK-LOG.md)
+
+기존 웹 비공개 일기는 브라우저에 보존되며 계정에 자동 업로드되지 않습니다. 아래 모바일 단계 설명은 이전 로드맵이며, 실제 모바일 저장소는 이미 AsyncStorage를 사용합니다. 이번 작업에서 모바일 앱은 변경하지 않았습니다.
+
 이모지 세 개로 하루를 남기는 iOS/Android 다이어리입니다.
 웹은 개발 미리보기 용도로만 사용합니다.
 

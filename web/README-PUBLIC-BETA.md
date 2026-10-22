@@ -1,35 +1,11 @@
-# Daymark public beta — deployment guide
+# Daymark beta
 
-## Before launch
-1. Create a feedback form (Google Forms or Tally). Ask: Would you use Daymark? What worked? What was confusing? What should we improve? Do not require real names or diary contents.
-2. Set environment variable `VITE_FEEDBACK_URL` to the full form URL in Netlify Site configuration > Environment variables. Redeploy afterward.
-3. Test locally: `npm install && npm run build && npm run dev`.
-4. Push the `daymark-app` directory contents to a GitHub repository.
-5. In Netlify choose Add new project > Import an existing project > GitHub. Build command: `npm run build`; publish directory: `dist`. Deploy and use the generated https URL.
-6. Test on iPhone and Android and in an incognito window.
+The web app now includes repository implementations for Google-only Supabase Auth, server community, English filtering, reporting, authorized administration, legal pages and emoji fortunes. Follow [DEPLOYMENT-SETUP.md](DEPLOYMENT-SETUP.md) before inviting users; external credentials and hosted deployment are not bundled.
 
-## What beta visitors should know
-- Private journal data stays in their own browser localStorage. Clearing browser data loses entries. No cross-device syncing.
-- Community Universe is a LOCAL PROTOTYPE: posts are not shared across users, despite the star UI. Do not describe it as a functioning public community.
-- Browser speech recognition may be unavailable; emoji suggestions are rule-based, not a connected AI model.
-- The daily community post limit is local only and can be bypassed; it is not account-enforced.
-- Do not invite users to enter highly sensitive diary information in an early beta.
+Private journals remain in `daymark.entries` browser storage, shared across accounts using that browser. No automatic upload or migration is performed. Historical `daymark.community.demo` data is retained but never published. Future journal migration must be opt-in, account-scoped, validated and preceded by JSON export; do not reuse community tables for private entries.
 
-## Production community requirements
-Add Supabase Auth and a server-side database with row-level security; separate public posts from private journal entries; enforce one post per user per local calendar day server-side; anonymous public display with no exposed user IDs; deletion and reporting; moderation and abuse controls; privacy policy and retention plan. Test security before opening shared posts to the public.
+Community uses explicit submissions to Supabase. Public projections include only separate public tokens, random aliases, emoji, day and moderation state; flagged text is fetched only on intentional reveal. Authorized administrators can associate shared activity with accounts. Self-disclosed personal details in a post can still identify its author.
 
-## Reddit beta post (edit after deployment)
-**Title:** We built Daymark, a three-emoji diary — could you test our free beta?
+Speech recognition uses the browser's service; suggestions and fortunes are local templates/rules. The manifest does not provide complete offline support. Finalize legal review, operator/contact and retention details before public release.
 
-Hi! We're a student team building Daymark, a gentle way to remember your day using three emojis and an optional diary note. Your monthly emoji choices become a personal constellation.
-
-We just launched a browser-based beta and would love honest feedback about the experience, especially what feels intuitive and what doesn't.
-
-Try it: [INSERT YOUR LIVE NETLIFY URL]
-Feedback form: [INSERT YOUR FORM URL]
-
-Note: Entries currently stay in your browser, and the anonymous Community Universe is a local preview, not yet shared across visitors. Please don't enter sensitive personal details.
-
-What would make you want to return to an app like this?
-
-(Please check each subreddit's self-promotion and feedback rules before posting.)
+Before sharing: configure a real feedback URL, verify Google sign-in/logout on the actual deployment, test two accounts and admin denial, inspect public responses, and run the setup guide's live checklist. Do not advertise an unconfigured installation as a working shared community.

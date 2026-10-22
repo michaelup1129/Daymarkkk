@@ -1,0 +1,5 @@
+project_id = "daymark"
+
+[functions.community-publish]
+# JWT is verified with Auth getUser inside the handler, including publishable-key projects.
+verify_jwt = false

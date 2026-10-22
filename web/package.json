@@ -1,1 +1,32 @@
-{"name":"daymark","version":"1.0.0","type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"tsc -b && vite build","preview":"vite preview --host 0.0.0.0"},"dependencies":{"vite":"*","typescript":"*","react":"*","react-dom":"*","lucide-react":"*"},"devDependencies":{"@types/react":"*","@types/react-dom":"*"}}
+{
+  "name": "daymark",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@2toad/profanity": "^3.3.0",
+    "@supabase/supabase-js": "^2.118.0",
+    "lucide-react": "*",
+    "react": "*",
+    "react-dom": "*",
+    "typescript": "*",
+    "vite": "*"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.11",
+    "@playwright/test": "^1.64.1",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "tsx": "^4.23.15"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
